@@ -524,7 +524,7 @@ footer{
 	background-image: url(../img/footback.jpg);
 	overflow: hidden;
 	background-repeat: no-repeat;
-	background-position: 0 -1100px
+	background-position: 0 -1000px
 }
 .menu-foot{
 	float: left;
@@ -552,7 +552,7 @@ footer{
 }
 
 
-@media (max-width: 825px){
+/*@media (max-width: 825px){
 .menu{
 	float:left;
 	margin-bottom:77px;
@@ -566,12 +566,25 @@ footer{
 .brands__margin{
 	width:5%;
 }
-}
+}*/
 
 	/*768px devices*/
-@media (max-width: 768px){
+@media (min-width: 768px) and (max-width: 959px){
 header{
 	height: 795px;
+}
+.menu{
+	float:left;
+	margin-bottom:77px;
+	margin-left: -5px;
+	letter-spacing: -0.06px;
+}
+.logo{
+	letter-spacing: -0.1px;
+	margin-bottom: -35px;
+}
+.brands__margin{
+	width:5%;
 }
 .lorem{
 	width: 36.2%;
@@ -724,10 +737,14 @@ header{
 	margin-bottom: 75px;
 	letter-spacing: 0.0px;
 }
+footer{
+	background-position: 0 0px;
+	overflow: hidden;
+}
 }
 
 /* 480px devices */
-@media(max-width: 480px){
+@media (min-width: 480px) and (max-width: 767px) {
 header{
 	height: 545px;
 }
@@ -770,6 +787,7 @@ header{
 	height: 47px;
 	border-top: 1px solid transparent;
 	border-bottom: 1px solid transparent;
+	pointer-events: none;
 }
 .menu .menu__item:last-child,
 .menu .menu__item:last-child .menu__link{
@@ -967,10 +985,12 @@ header{
 }
 
 /* 320px device */
-@media(max-width:320px){
+@media (min-width: 320px) and (max-width: 479px){
 header{
 	height: 513px;
+	min-width: 320px;
 }
+
 .lor{
 	background: transparent;
 }
