@@ -737,10 +737,7 @@ header{
 	margin-bottom: 75px;
 	letter-spacing: 0.0px;
 }
-footer{
-	background-position: 0 0px;
-	overflow: hidden;
-}
+
 }
 
 /* 480px devices */
@@ -908,8 +905,10 @@ header{
 }
 .update{
 	float: none;
-	width:93%;
+	width:100%;
+	box-sizing: border-box;
 	padding-left: 74px;
+	padding-right: 40px;
 	padding-top: 48px;
 	padding-bottom: 60px;
 }
@@ -935,12 +934,14 @@ header{
 	padding-top: 79px;
 	padding-left: 8px;
 	height: 494px;
+	border-bottom: 1px solid transparent;	
 }
 .copy,
 .comments,
 .categories{
 	display: block;
 	width: 100%;
+	float: none;
 	padding-right: 10px;
 	margin-bottom: 52px;
 }
@@ -956,7 +957,7 @@ header{
 }
 .menu-foot{
 	width: 100%;
-	margin-top: 36px
+	margin-top: 36px;
 }
 .menu-foot .menu__item{
 	display:inline-block;
@@ -979,8 +980,13 @@ header{
 	border-radius: 0;
 }
 .designed{
+	margin-top: 100px;
 	margin-right: 164px;
 	letter-spacing: -0.05px;
+}
+footer{
+	width: 100%;
+	height: 200px;
 }
 }
 
