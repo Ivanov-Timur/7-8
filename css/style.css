@@ -16,6 +16,7 @@ header{
 }
 .container{
 	max-width: 960px;
+	min-width: 320px;
 	margin: 0 auto;
 }
 .logo{
@@ -569,7 +570,7 @@ footer{
 }*/
 
 	/*768px devices*/
-@media (min-width: 768px) and (max-width: 959px){
+@media (max-width: 959px){
 header{
 	height: 795px;
 }
@@ -741,7 +742,7 @@ header{
 }
 
 /* 480px devices */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (max-width: 767px) {
 header{
 	height: 545px;
 }
@@ -866,10 +867,10 @@ header{
 	padding-right: 10px;
 	margin-bottom: 60px;
 }
-.about-music{
+/*.about-music{
 	padding-top: 5px;
 	padding-left: 62px;
-}
+}*/
 .about-music:before{
 	left:10px;
 	top: 5px;
@@ -880,9 +881,9 @@ header{
 .about__link{
 	top: 5px;
 }
-.about-music .about__link{
-	margin-right: -9px;
-}
+/*.about-music .about__link{
+	margin-right: 0px;
+}*/
 .starts{
 	width: 95%;
 	margin-top: -30px;
@@ -991,10 +992,9 @@ footer{
 }
 
 /* 320px device */
-@media (min-width: 320px) and (max-width: 479px){
+@media (max-width: 479px){
 header{
 	height: 513px;
-	min-width: 320px;
 }
 
 .lor{
