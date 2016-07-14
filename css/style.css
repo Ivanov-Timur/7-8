@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 header{
 	background: url(../img/back.jpg);
 	height: 843px;
@@ -18,6 +19,7 @@ header{
 	max-width: 960px;
 	min-width: 320px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .logo{
 	margin-top: 70px;
@@ -69,10 +71,12 @@ header{
 	background-color: rgba(0, 0, 0, 0.2);
 	padding-top: 88px;
 	box-sizing: border-box;
+	position: relative;
 }
 .lor-cont{
 	max-width: 960px;
 	position: relative;
+	overflow: visible;
 }
 .lorem{
 	width: 54%;
@@ -122,6 +126,26 @@ header{
 	top: -105px;
 	right: 70px;
 }
+.prev{
+	width: 30px;
+	height: 42px;
+	background-image: url(../img/slide.png);
+	position: absolute;
+	top: 183px;
+	left: 15px;
+	cursor: pointer;
+}
+.next{
+	width: 30px;
+	height: 42px;
+	background-image: url(../img/slide.png);
+	transform: rotate(180deg);
+	position: absolute;
+	top: 183px;
+	right: 15px;
+	cursor: pointer;
+}
+
 .slider{
 	margin-top: 92px;
 	margin-right: 165px;
@@ -130,6 +154,9 @@ header{
 .slider__item{
 	display: inline-block;
 	margin-left: 1px;
+}
+.slider__link:hover{
+	box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 .slider__link{
 	width: 11px;
@@ -318,6 +345,9 @@ header{
 	background-image: linear-gradient(to top, #454545 0%, #6a6a6a 100%);
 	border: 1px solid #454545;
 }
+.slider-start .slider__link:hover{
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
 .update{
 	width: 46.9%;
 	float: right;
@@ -401,20 +431,16 @@ header{
 	width: 100%;
 	box-sizing: border-box;
 }
-.brands__margin{
-	width: 9.6875%;
-	display: inline-block;
-}
-.brands__space{
-	width: 6.8%;
-	display: inline-block;
-}
 .brands__logo{
 	width: 69px;
 	height: 65px;
 	background-image: url(../img/logos.png);
 	display: inline-block;
-	/*background-repeat: no-repeat;*/
+	margin-right: 6.8%;
+	background-repeat: no-repeat;
+}
+.brand1{
+	margin-left: 9.6875%;
 }
 .brand2{
 	width: 73px;
@@ -435,6 +461,7 @@ header{
 .brand6{
 	width: 82px;
 	background-position: -696px;
+	margin-right: 0;
 }
 .brands__logo:hover{
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -553,27 +580,14 @@ footer{
 }
 
 
-/*@media (max-width: 825px){
-.menu{
-	float:left;
-	margin-bottom:77px;
-	margin-left: -5px;
-	letter-spacing: -0.06px;
-}
-.logo{
-	letter-spacing: -0.1px;
-	margin-bottom: -35px;
-}
-.brands__margin{
-	width:5%;
-}
-}*/
-
 	/*768px devices*/
-@media (max-width: 959px){
+@media (max-width: 1099px){
 header{
 	height: 795px;
 }
+.container{
+	width: 94.79166667%;
+}
 .menu{
 	float:left;
 	margin-bottom:77px;
@@ -583,9 +597,6 @@ header{
 .logo{
 	letter-spacing: -0.1px;
 	margin-bottom: -35px;
-}
-.brands__margin{
-	width:5%;
 }
 .lorem{
 	width: 36.2%;
@@ -608,6 +619,12 @@ header{
 .iphone{
 	top: -110px;
 	right: 48px
+}
+.prev{
+	left: 0;
+}
+.next{
+	right: 0;
 }
 .slider{
 	margin-top: 36px;
@@ -697,11 +714,20 @@ header{
 	margin-top: -5px;
 	font-size: 19px;
 }
-.brands__margin{
+/*.brands__margin{
 	width:0.5%;
 }
 .brands__space{
 	width:7.3%;
+}*/
+.brands__logo{
+	margin-right: 7.3%;
+}
+.brand1{
+	margin-left: 0.5%;
+}
+.brand6{
+	margin-right: 0;
 }
 .comments__head,
 .copy__head,
@@ -746,6 +772,9 @@ header{
 header{
 	height: 545px;
 }
+.container{
+	width: 91.66666666666667%;
+}
 .logmen{
 	height: 203px;
 }
@@ -757,6 +786,10 @@ header{
 	padding-top: 70px;
 	margin-bottom: 23px;
 	letter-spacing: -0.25px;
+}
+.prev,
+.next{
+	top: 105px;
 }
 .main-menu{
 	position:relative;
@@ -867,10 +900,10 @@ header{
 	padding-right: 10px;
 	margin-bottom: 60px;
 }
-/*.about-music{
+.about-music{
 	padding-top: 5px;
 	padding-left: 62px;
-}*/
+}
 .about-music:before{
 	left:10px;
 	top: 5px;
@@ -880,10 +913,11 @@ header{
 }
 .about__link{
 	top: 5px;
+	margin-right: 3px;
 }
-/*.about-music .about__link{
-	margin-right: 0px;
-}*/
+.about-music .about__link{
+	margin-right: -7px;
+}
 .starts{
 	width: 95%;
 	margin-top: -30px;
@@ -920,7 +954,7 @@ header{
 	padding-top: 11px;
 	padding-bottom: 9px;
 }
-.brands__margin{
+/*.brands__margin{
 	width: 16%;
 	height: 91px;
 	vertical-align: top;
@@ -930,6 +964,29 @@ header{
 }
 .brands :nth-child(8){
 	margin-left: 51px;
+}*/
+.brands{
+	width: 362px;
+	overflow: hidden;
+	display: block;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.brands__logo{
+	vertical-align: top;
+	margin-right: 54px;
+}
+.brand1{
+	margin-left: 24px;
+	margin-bottom: 26px;
+}
+.brand4,
+.brand5{
+	margin-right: 56px;
+}
+.brand3,
+.brand6{
+	margin-right: 0;
 }
 .pigbull{
 	padding-top: 79px;
@@ -957,7 +1014,7 @@ header{
 	height: 100px;
 }
 .menu-foot{
-	width: 100%;
+	width: 95%;
 	margin-top: 36px;
 }
 .menu-foot .menu__item{
@@ -981,7 +1038,7 @@ header{
 	border-radius: 0;
 }
 .designed{
-	margin-top: 100px;
+	margin-top: 91px;
 	margin-right: 164px;
 	letter-spacing: -0.05px;
 }
@@ -996,7 +1053,9 @@ footer{
 header{
 	height: 513px;
 }
-
+.container{
+	width: 87.5%;
+}
 .lor{
 	background: transparent;
 }
@@ -1004,12 +1063,14 @@ header{
 	display: none;
 }
 .lorem{
-	width:100%;
+	width:90%;
 	padding-left: 33px;
+	box-sizing: border-box;
 }
 .lorem__subhead{
 	font-size: 18px;
 	width: 220px;
+	display:inline-block;
 }
 .slider{
 	margin-top: -18px;
@@ -1017,6 +1078,11 @@ header{
 .about-company{
 	padding-top: 70px;
 	padding-bottom: 7px;
+	padding-left: 0;
+}
+.about{
+	width: 93%;
+	margin-left: 12px;
 }
 .about-message{
 	margin-bottom: 71px
@@ -1068,29 +1134,32 @@ header{
 .brands{
 	padding-top: 26px;
 	height: 364px;
+	width: 250px;
+	margin: 0 auto;
 }
-.brands__margin{
+/*.brands__margin{
 	width: 18%;
 }
 .brands__space{
 	width: 18.3%;
 	height: 125px;
 	vertical-align: top;
+}*/
+.brand1,
+.brand3{
+	margin-left: 26px;
+	margin-right: 56px;
+	margin-bottom: 61px;
+}
+.brand2,
+.brand4,
+.brand6{
+	margin-right: 0;
 }
 .brand3{
-	margin-left: 9px;
+	margin-right: 65px;
 }
-.brands :nth-child(8){
-	margin-left: 0;
-}
-.brand5{
-	margin-left: 34px;
-}
-.brand5,
-.brand6{
-	position: relative;
-	top: -19px;
-}
+
 .pigbull{
 	display: none;
 }
